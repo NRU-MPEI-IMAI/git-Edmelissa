@@ -1,0 +1,47 @@
+digraph G2_1 
+{
+    n1 [label = q1]
+    n2 [label = q2, shape = doublecircle]
+    n3 [label = q3, shape = doublecircle]
+	
+	
+	n1 -> n2 [label = "a"]
+	n2 -> n3 [label = "a"]
+	
+	n4 [label = q4]
+  n5 [label = q5,]
+  n6 [label = q6, shape = doublecircle]
+    
+  n4 -> n5 [label = "b"]
+	n5 -> n6 [label = "b"]
+	n6 -> n6 [label = "b"]
+	
+	
+	n14 [label = q14]
+	n24 [label = q24]
+	n34 [label = q34]
+	n25 [label = q25]
+	n35 [label = q35]
+	n15 [label = q15]
+	n16 [label = q16]
+	n26 [label = q26, shape = doublecircle]
+	n36 [label = q36, shape = doublecircle]
+	
+	
+	n14 -> n24 [label = "a"]
+	n14 -> n15 [label = "b"]
+	n24 -> n34 [label = "a"]
+	n24 -> n25 [label = "b"]
+	n15 -> n25 [label = "a"]
+	n15 -> n16 [label = "b"]
+	n25 -> n35 [label = "a"]
+	n25 -> n26 [label = "b"]
+	n34 -> n35 [label = "b"]
+	n35 -> n36 [label = "b"]
+	n16 -> n26 [label = "a"]
+	n26 -> n36 [label = "a"]
+	
+	n16 -> n16 [label = "b"]
+	n26 -> n26 [label = "b"]
+	n36 -> n36 [label = "b"]	
+}
