@@ -1,1 +1,22 @@
+digraph G4
+{
+  n13 [label = q13]
+  n14 [label = q14, shape = doublecircle]
+  n15 [label = q15, shape = doublecircle]
+  n23 [label = q23, shape = doublecircle]
+  n24 [label = q24, shape = doublecircle]
+  n25 [label = q25, shape = doublecircle]
 
+  n13 -> n23 [label = "a"]
+  n13 -> n14 [label = "b"]
+  n14 -> n24 [label = "a"]
+  n14 -> n25 [label = "b"]
+  n15 -> n25 [label = "a"]
+  n15 -> n23 [label = "b"]
+  n23 -> n13 [label = "a"]
+  n23 -> n24 [label = "b"]
+  n24 -> n14 [label = "a"]
+  n24 -> n15 [label = "b"]
+  n25 -> n15 [label = "a"]
+  n25 -> n13 [label = "b"]
+}
