@@ -5,16 +5,16 @@ digraph G2
     n3 [label = q3]
     n4 [label = q4 , shape = doublecircle]
 	
-	n1 -> n2 [label = "a,b"]
-	n2 -> n3 [label = "a,b"]
-	n3 -> n4 [label = "a,b"]
-	n4 -> n4 [label = "a,b"]
+    n1 -> n2 [label = "a,b"]
+    n2 -> n3 [label = "a,b"]
+    n3 -> n4 [label = "a,b"]
+    n4 -> n4 [label = "a,b"]
 	
     n5 [label = q5]
     n6 [label = q6, shape = doublecircle]
-	
-	n5 -> n6 [label = "a,b"]
-	n6 -> n6 [label = "a,b"]
+    
+    n5 -> n6 [label = "a,b"]
+    n6 -> n5 [label = "a,b"]
 	
     n15 [label = q15]
     n16 [label = q16]
