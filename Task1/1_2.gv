@@ -1,4 +1,4 @@
-digraph G2_1 
+digraph G2 
 {
     n1 [label = q1]
     n2 [label = q2, shape = doublecircle]
