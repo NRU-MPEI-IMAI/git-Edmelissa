@@ -18,20 +18,21 @@
 
 \maketitle
 
-\section{Построить конечный автомат}
+%1 задание
+\section{Построить конечный автомат, распознающий язык}
   
 \begin{description}
 
   \item [L_1 =\{ \omega \in \{a,b,c\}^* ||\omega_{c}| = 1 \}]
   
-  \item \includegraphics[scale=0.25]{1}
+  \item \includegraphics[scale=0.25]{1_1}
   
   \item [L_2 = \{ \omega \in \{a,b\}^* || \omega_{a}| \leq 2 |\omega_{b}| \geq 2 \}]
   \item Воспользуемся прямым произведением к языкам $L_{21}$ и $L_{22}$
   \item $L_{21}=\{ \omega \in \{a\}^* || \omega_{a}| \leq 2\}$
   \item $L_{22}=\{ \omega \in \{b\}^* || \omega_{b}| \geq 2\}$
   
-  \item \includegraphics[scale=0.55]{2}
+  \item \includegraphics[scale=0.55]{1_2}
   
   \item [L_3 = \{ \omega \in \{a,b\}^* ||\omega_{a}| \neq |\omega_{b}| \}]
     \item Воспользуемся дополнением к языку $L_3$
@@ -51,14 +52,95 @@
     \item Из нерегулярности дополнения к языку следует нерегулярность языка
   
   \item [L_4 = \{ \omega \in \{a,b\}^* |\omega\omega = \omega\omega\omega \}]
-  \item
   
-  \item \includegraphics[scale=0.25]{4}
+  \item \includegraphics[scale=0.25]{1_4}
     
 \end{description}    
 
+\newpage
+%2 задание
+\section{Построить конечный автомат, используя прямое произведение}
+
+\begin{description}
+
+  \item [L_1 =\{ \omega \in \{a,b\}^* ||\omega_{a}| \geq 2 \land |\omega_{b}| \geq 2 \}]
+  \item Воспользуемся прямым произведением к языкам $L_{11}$ и $L_{12}$
+  \item $L_{11}=\{ \omega \in \{a\}^* || \omega_{a}| \geq 2\}$
+  \item $L_{12}=\{ \omega \in \{b\}^* || \omega_{b}| \geq 2\}$
+  \item Жирным выделена терминальная вершина
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    q1q4 & q2q4 & q1q5 \\
+    q1q5 & q2q5 & q1q6 \\
+    q1q6 & q2q6 & q1q6 \\
+    q2q4 & q3q4 & q2q5 \\
+    q2q5 & q3q5 & q2q6 \\
+    q2q6 & q3q6 & q2q6 \\
+    q3q4 & q3q4 & q3q5 \\
+    q3q5 & q3q5 & q3q6 \\
+    \textbf {q3q6} & q3q6 & q3q6 \\
+  \hline
+  \end{tabular}
+  \item \includegraphics[scale=0.65]{2_1}
+  \newpage
+  
+  \item [L_2 = \{ \omega \in \{a,b\}^* || \omega | \leq 3 \land |\omega| нечетное \}]
+  \item Воспользуемся прямым произведением к языкам $L_{21}$ и $L_{22}$
+  \item $L_{21}=\{ \omega \in \{a,b\}^* || \omega | \leq 3\}$
+  \item $L_{22}=\{ \omega \in \{a,b\}^* || \omega | нечетное\}$
+  \item Жирным выделена терминальная вершина
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    q1q5 & q2q6 & q2q6 \\
+    q1q6 & q2q5 & q2q5 \\
+    q2q5 & q3q6 & q3q6 \\
+    q2q6 & q3q5 & q3q5 \\
+    q3q5 & q4q6 & q4q6 \\
+    q3q6 & q4q5 & q4q5 \\
+    q4q5 & q4q6 & q4q6 \\
+    \textbf {q4q6} & q4q5 & q4q5 \\
+  \hline
+  \end{tabular}
+  \item Одна из ветвей графа является излишней, так как в нее невозможно попасть из начального узла q15
+  \item \includegraphics[scale=0.65]{2_2}
+  \includegraphics[scale=0.65]{2_2(f)}
+  \newpage
+  
+  \item [L_3 = \{ \omega \in \{a,b\}^* ||\omega_{a}| четное \land |\omega_{b}| \vdots 3\}]
+  \item Воспользуемся прямым произведением к языкам $L_{31}$ и $L_{32}$
+  \item $L_{31}=\{ \omega \in \{a,b\}^* ||\omega_{a}| четное\}$
+  \item $L_{32}=\{ \omega \in \{a,b\}^* ||\omega_{b}| \vdots 3\}$
+  \item Жирным выделена терминальная вершина
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    \textbf {q1q3} & q2q3 & q1q4 \\
+    q1q4 & q2q4 & q2q5 \\
+    q2q5 & q2q5 & q2q3 \\
+    q2q3 & q1q3 & q2q4 \\
+    q3q4 & q1q4 & q1q5 \\
+    q3q5 & q1q5 & q1q3 \\
+  \hline
+  \end{tabular}
+  \item \includegraphics[scale=0.45]{2_3}
+  
+  \item [L_4 = \overline{L_3}]
+  \item Воспользуемся свойством обратного языка - заменим терминальные узлы на обычные, и наоборот - обычные на терминальные.
+  \item \includegraphics[scale=0.45]{2_4}
+  \newpage
+  
+  \item [L_5 = L_2 \setminus L_3]
+  \item Разность двух языков можно представить как L_2 $\cap \overline{L_3}$
+  \item \includegraphics[scale=0.4]{2_5}
+  \item В графе содержатся лишние узлы, так как в них невозможно попасть из начального узла q16, удалим их
+  \item \includegraphics[scale=0.4]{2_5(f)}
+  \newpage
+  
+\end{description}
+
+%3 задание
+\section{Построить минимальный ДКА по регулярному выражению}
+
 \end{document}
-
-
-
-
