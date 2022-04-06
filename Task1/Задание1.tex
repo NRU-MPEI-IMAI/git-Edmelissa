@@ -3,23 +3,59 @@
 \usepackage{mathtext}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[english,russian]{babel}
+\usepackage[left=12.7mm, top=12.7mm, right=12.7mm, bottom=12.7mm, nohead, footskip=5mm]{geometry} % настройки полей документа
+
+%для вставки рисунков
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usepackage[fleqn]{amsmath}
 
 \title{Домашняя работа №1}
 \author{А-13а-19 Самсонова Мария}
-\date{5 Апреля 2022}
 
 \begin{document}
-
 
 \maketitle
 
 \section{Построить конечный автомат}
+  
+\begin{description}
 
-\begin{align*}
-&\omega \in {a,b,c}* ||\omega_{c}| = 1  
-\end{align*}
+  \item [L_1 =\{ \omega \in \{a,b,c\}^* ||\omega_{c}| = 1 \}]
+  
+  \item \includegraphics[scale=0.25]{1}
+  
+  \item [L_2 = \{ \omega \in \{a,b\}^* || \omega_{a}| \leq 2 |\omega_{b}| \geq 2 \}]
+  \item Воспользуемся прямым произведением к языкам $L_{21}$ и $L_{22}$
+  \item $L_{21}=\{ \omega \in \{a\}^* || \omega_{a}| \leq 2\}$
+  \item $L_{22}=\{ \omega \in \{b\}^* || \omega_{b}| \geq 2\}$
+  
+  \item \includegraphics[scale=0.55]{2}
+  
+  \item [L_3 = \{ \omega \in \{a,b\}^* ||\omega_{a}| \neq |\omega_{b}| \}]
+    \item Воспользуемся дополнением к языку $L_3$
+    \item $\overline{L_3} = \{ \omega \in \{a,b\}^* ||\omega_{a}| = |\omega_{b}| \}$
+    \item Докажем, что $\overline{L_3}$ нерегулярный язык, для этого воспользуемся леммой о накачке
+    \begin{itemize}
+      \item Зафиксируем n
+      \item Возьмем слово $a^nb^n \in \overline{L_3}$
+      \item Разобьем его на $x,y,z$ такие, что $|xy| \leq n$ и $|y| \geq 1$
+      \begin{itemize}
+        \item $x=a^{n-m}$
+        \item $y=a^m$
+        \item $z=b^n$
+      \end{itemize}
+      \item Тогда при накачке $y$ полученное слово $\notin \overline{L_3}$ 
+    \end{itemize}
+    \item Из нерегулярности дополнения к языку следует нерегулярность языка
+  
+  \item [L_4 = \{ \omega \in \{a,b\}^* |\omega\omega = \omega\omega\omega \}]
+  \item
+  
+  \item \includegraphics[scale=0.25]{4}
+    
+\end{description}    
 
 \end{document}
 
