@@ -33,7 +33,7 @@ digraph G3
   n15 -> n25 [label = "a"]
   n15 -> n23 [label = "b"]
   n23 -> n13 [label = "a"]
-  n23 -> n14 [label = "b"]
+  n23 -> n24 [label = "b"]
   n24 -> n14 [label = "a"]
   n24 -> n15 [label = "b"]
   n25 -> n15 [label = "a"]
