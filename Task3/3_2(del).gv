@@ -21,10 +21,10 @@ digraph G
     
     n6 -> n4 [label = "b"]
     n6 -> n7 [label = "b"]
-    n6 -> n13 [label = "b"]
     
     n7 -> n4 [label = "a"]
     n7 -> n9 [label = "b"]
+    n7 -> n13 [label = "b"]
     
     n9 -> n12 [label = "a"]
     
