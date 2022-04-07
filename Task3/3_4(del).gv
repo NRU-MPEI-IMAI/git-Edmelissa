@@ -17,7 +17,6 @@ digraph G
     n11 -> n3  [label = "b"]
     n11 -> n12  [label = "b"]
     
-    n12 -> n3 [label = "c"]
     n12 -> n14 [label = "c"]
     
     n14 -> n14  [label = "c"]
@@ -30,3 +29,4 @@ digraph G
     n18 -> n11 [label = "a"]
     n18 -> n14  [label = "c"]
 }
+
