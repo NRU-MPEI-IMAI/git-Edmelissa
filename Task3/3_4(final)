@@ -4,7 +4,7 @@ digraph G
     n11 [label = p11]
     n3_12 [label = p3_12]
     n3_14 [label = p3_14, shape = doublecircle]
-    n14 [label = p14]
+    n14 [label = p14, shape = doublecircle]
     n17 [label = p17]
     n18 [label = p18, shape = doublecircle]
 	
