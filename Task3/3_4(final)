@@ -29,5 +29,9 @@ digraph G
     n3_18 -> n17 [label = "b"]
     n3_18 -> n14 [label = "c"]
     
+    n14 -> n11 [label = "a"]
+    n14 -> n17 [label = "b"]
+    n14 -> n14 [label = "c"]
+    
     n17 -> n3_18 [label = "a"]
 }
