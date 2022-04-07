@@ -1,3 +1,4 @@
+digraph G 
 {
     n1 [label = p1]
     n2 [label = p2]
