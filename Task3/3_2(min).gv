@@ -1,0 +1,18 @@
+digraph G 
+{
+    n1 [label = p1]
+    n2_9_13 [label = p2_9_13, shape = doublecircle]
+    n4_7_12 [label = p4_7_12]
+    n6 [label = p6]
+
+    n1 -> n2_9_13 [label = "a"]
+    
+    n2_9_13 -> n4_7_12 [label = "a"]
+    
+    n4_7_12 -> n2_9_13 [label = "b"]
+    
+    n4_7_12 -> n6 [label = "a"]
+    
+    n6 -> n4_7_12 [label = "b"]
+
+}
