@@ -5,9 +5,9 @@ digraph G
     n11 [label = p11]
     n3_12 [label = p3_12]
     n3_14 [label = p3_14, shape = doublecircle]
-    n3_18 [label = p3_18, shape = doublecircle]
     n14 [label = p14, shape = doublecircle]
     n17 [label = p17]
+    n18 [label = p18, shape = doublecircle]
 	
     n1 -> n3 [label = "b,c"]
     
@@ -25,13 +25,13 @@ digraph G
     n3_14 -> n17 [label = "b"]
     n3_14 -> n14 [label = "c"]
     
-    n3_18 -> n11 [label = "a"]
-    n3_18 -> n17 [label = "b"]
-    n3_18 -> n14 [label = "c"]
-    
     n14 -> n11 [label = "a"]
     n14 -> n17 [label = "b"]
     n14 -> n14 [label = "c"]
     
-    n17 -> n3_18 [label = "a"]
+    n17 -> n18 [label = "a"]
+    
+    n18 -> n11 [label = "a"]
+    n18 -> n17 [label = "b"]
+    n18 -> n14 [label = "c"]
 }
