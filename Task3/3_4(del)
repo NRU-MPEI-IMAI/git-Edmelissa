@@ -1,0 +1,33 @@
+digraph G 
+{
+    n1 [label = p1]
+    n3 [label = p3]
+    n11 [label = p11]
+    n12 [label = p12]
+    n14 [label = p14]
+    n17 [label = p17]
+    n18 [label = p18, shape = doublecircle]
+	
+    n1 -> n3 [label = "b,c"]
+    
+    n3 -> n11 [label = "a"]
+    n3 -> n17 [label = "b"]
+    n3 -> n14 [label = "c"]
+    
+    n11 -> n3  [label = "b"]
+    n11 -> n12  [label = "b"]
+    
+    n12 -> n3 [label = "c"]
+    n12 -> n14 [label = "c"]
+    
+    n14 -> n14  [label = "c"]
+    n14 -> n11 [label = "a"]
+    n14 -> n17 [label = "b"]
+    
+    n17 -> n3  [label = "a"]
+    n17 -> n18 [label = "a"]
+    
+    n18 -> n17  [label = "b"]
+    n18 -> n11 [label = "a"]
+    n18 -> n14  [label = "c"]
+}
