@@ -2,7 +2,7 @@ digraph G
 {
     n1 [label = p1, shape = doublecircle]
     n1_7 [label = p1_7, shape = doublecircle]
-    n1_9 [label = p1_14, shape = doublecircle]
+    n1_9 [label = p1_9, shape = doublecircle]
     n1_14 [label = p1_14, shape = doublecircle]
     n1_7_12 [label = p1_7_12, shape = doublecircle]
     n1_9_14 [label = p1_9_14, shape = doublecircle]
