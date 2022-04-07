@@ -1,0 +1,28 @@
+digraph G 
+{
+    n1 [label = p1, shape = doublecircle]
+    n1_7_9 [label = n1_7_9, shape = doublecircle]
+    n1_14 [label = p1_14, shape = doublecircle]
+    n1_7_9_12_14 [label = n1_7_9_12_14, shape = doublecircle]
+    n9 [label = p9]
+    n9_14 [label = p9_14]
+    n12_14 [label = p12_14]
+	
+    n1 -> n1_7_9 [label = "a"]
+    n1 -> n9 [label = "b"]
+    
+    n1_7_9 -> n1_7_9_12_14 [label = "a"]
+    n1_7_9 -> n9_14 [label = "b"]
+    
+    n9 -> n12_14 [label = "a,b"]
+    
+    n1_7_9_12_14 -> n1_7_9_12_14 [label = "a,b"]
+    
+    n9_14 -> n12_14 [label = "a"]
+    n9_14 -> n1_14 [label = "b"]
+    
+    n12_14 -> n1 [label = "b"]
+    
+    n1_14 -> n1 [label = "a"]
+    n1_14 -> n1_7_9 [label = "b"]
+}
