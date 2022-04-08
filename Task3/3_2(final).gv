@@ -8,8 +8,6 @@ digraph G
     n6 [label = p6]
     n12 [label = p12]
     n4_7 [label = p4_7]
-    n9 [label = p9]
-    n13 [label = p13, shape = doublecircle]
 
     n1 -> n2_9_13 [label = "a"]
     
@@ -28,8 +26,5 @@ digraph G
     n4_7 -> n4_6 [label = "a"]
     n4_7 -> n9_13 [label = "b"]
     
-    n12 -> n13 [label = "b"]
-    n12 -> n9 [label = "b"]
-    
-    n9 -> n12 [label = "a"]
+    n12 -> n9_13 [label = "b"]
 }
