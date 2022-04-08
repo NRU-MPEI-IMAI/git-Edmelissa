@@ -53,7 +53,7 @@ digraph G
     n11 -> n5 [label = "a"]
     n11 -> n16 [label = "b"]
     
-    n12 -> n17 [label = "b"]
+    n12 -> n17 [label = "a"]
     n12 -> n8 [label = "b"]
     
     n13 -> n9  [label = "a"]
