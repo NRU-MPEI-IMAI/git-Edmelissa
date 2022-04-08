@@ -21,6 +21,7 @@ digraph G
     n2 -> n10 [label = "λ"]
     n3 -> n4 [label = "a"]
     n4 -> n5 [label = "λ"]
+    n4 -> n7 [label = "λ"]
     n4 -> n8 [label = "λ"]
     n5 -> n6 [label = "a"]
     n6 -> n7 [label = "b"]
