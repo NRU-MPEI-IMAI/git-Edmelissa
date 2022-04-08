@@ -11,7 +11,7 @@ digraph G
 
 
     n1 -> n2 [label = "a"]
-    n1 -> n9 [label = "a"]
+    n1 -> n12 [label = "a"]
     n1 -> n13 [label = "a"]
     
     n2 -> n4 [label = "a"]
