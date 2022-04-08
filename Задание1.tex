@@ -43,7 +43,8 @@
       \item Возьмем слово $a^nb^n \in \overline{L_3}$
       \item Разобьем его на $x,y,z$ такие, что $|xy| \leq n$ и $|y| \geq 1$
       \begin{itemize}
-        \item $x=a^{n-m}$
+        \item при 0 < m < n
+        \item $x=a^{n-m}$ 
         \item $y=a^m$
         \item $z=b^n$
       \end{itemize}
@@ -143,16 +144,187 @@
 %3 задание
 \section{Построить минимальный ДКА по регулярному выражению}
 \begin{description}
-
+  \item [(ab + aba)∗a]
+  \item Построим НКА с использованием $\lambda$-переходов, затем удалим их
+  \item С помощью алгоритма Томсона построим ДКА
+  \item Q: \{1\} \{4,7,12\} \{1,5,8\} \{1,4,7,9,12\}
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    1 & 4,7,12 & \emptyset \\
+    4,7,12 & \emptyset & 1,5,8 \\
+    1,5,8 & 1,4,7,9,12 & \emptyset \\
+    1,4,7,9,12 & 1,4,7,9,12 & 1,5,8 \\
+  \hline
+  \end{tabular} 
+  \item Полученный ДКА минимальный
   \item \includegraphics[scale=0.4]{3_1(l)}
   \includegraphics[scale=0.4]{3_1(d)}
   \includegraphics[scale=0.4]{3_1(f)}
+  \newpage
   
+  \item [a(a(ab)∗b)∗(ab)∗]
+  \item Построим НКА с использованием $\lambda$-переходов, затем удалим их
   \item \includegraphics[scale=0.4]{3_2(l)}
   \includegraphics[scale=0.4]{3_2(d)}
-  \includegraphics[scale=0.4]{3_2(f)}
   
+  \item С помощью алгоритма Томсона построим ДКА
+  \item Q: \{1\} \{2\} \{4,12\} \{6\} \{9,13\} \{7\} \{9\}
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    1 & 2 & \emptyset \\
+    2 & 4,12 & \emptyset \\
+    4,12 & 6 & 9,13 \\
+    6 & \emptyset & 7 \\
+    9,13 & 4,12 & \emptyset \\
+    7 & 6 & 9 \\
+    9 & 4,12 & \emptyset \\
+  \hline
+  \end{tabular}
+  \item Минимизируем полученный ДКА
+  \item \includegraphics[scale=0.4]{3_2(f)}
+  \includegraphics[scale=0.4]{3_2(m)}
+  \newpage
   
+  \item [(a+(a+b)(a+b)b)∗]
+  \item Построим НКА с использованием $\lambda$-переходов, затем удалим их
+  \item \includegraphics[scale=0.4]{3_3(l)}
+  \includegraphics[scale=0.4]{3_3(d)}
+  
+  \item С помощью алгоритма Томсона построим ДКА
+  \item Q: \{1\} \{1,7\} \{9\} \{1,7,12\} \{9,14\} \{12\} \{14\} \{1,9,14\} \{1,14\} \{1,9\}
+  \item \begin{tabular}{ | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    1 & 1,7 & 9 \\
+    1,7 & 1,7,12 & 9,14 \\
+    9 & 12 & 14 \\
+    1,7,12 & 1,7,12 & 1,9,14 \\
+    9,14 & 12 & 1,14 \\
+    12 & \emptyset & 1 \\
+    14 & \emptyset & 1 \\
+    1,9,14 & 1,7,12 & 1,9,14 \\
+    1,14 & 1 & 1,9 \\
+    1,9 & 1,7,12 & 9,14 \\
+  \hline
+  \end{tabular}
+  \item Минимизируем полученный ДКА
+  \item\includegraphics[scale=0.4]{3_3(f)}
+  \includegraphics[scale=0.4]{3_3(m)}
+  \newpage
+  
+  \item [(b+c)((ab)∗c+(ba)∗)∗]
+  \item Построим НКА с использованием $\lambda$-переходов, затем удалим их
+  
+  \item \includegraphics[scale=0.4]{3_4(l)}
+  \includegraphics[scale=0.4]{3_4(d)}
+  
+  \item С помощью алгоритма Томсона построим ДКА
+  \item Q: \{1\} \{3,14\} \{11\} \{17\} \{14\} \{3,12\} \{18\}
+  \item \begin{tabular}{| l | l | l | l | }
+  \hline
+    Узел & a & b & c\\ \hline
+    1 & \emptyset & 3,14 & 3,14 \\
+    3,14 & 11 & 17 & 14 \\
+    11 & \emptyset & 3,12 & \emptyset \\
+    17 & 18 & \emptyset & \emptyset \\
+    14 & 11 & 17 & 14 \\
+    3,12 & 11 & 17 & 3,14 \\
+    18 & 11 & 17 & 14 \\
+  \hline
+  \end{tabular}
+  \item Минимизируем полученный ДКА
+  \item\includegraphics[scale=0.4]{3_4(f)}
+  \includegraphics[scale=0.4]{3_4(m)}
+  \newpage
+  
+  \item [(a + b)^{+}(aa + bb + abab + baba)(a + b)^{+}]
+  \item Построим НКА с использованием $\lambda$-переходов, затем удалим их
+  \item \includegraphics[scale=0.35]{3_5(l)}
+  \includegraphics[scale=0.35]{3_5(d)}
+  
+  \item С помощью алгоритма Томсона построим ДКА
+  \item Q: \{1\} \{3\} \{3,8\} \{3,15\} \{3,8,10\} \{3,12,15\} \{3,8,19\} \{3,15,17\} \{3,8,10,26\} \{3,12,15,26\} \{3,8,13,19\} \{3,12,15,20\} \{3,8,13,19,26\} \{3,15,17,26\} \{3,8,19,26\} \{3,12,14,15,20\} \{3,8,13,19,21\} \{3,12,14,15,20,26\} \{3,8,13,19,21,26\} \{3,12,15,20,26\}
+  \item \begin{tabular}{| l | l | l | l | }
+  \hline
+    Узел & a & b \\ \hline
+    1 & 2 & 2 \\
+    2 & 3 & 4 \\
+    3 & 5 & 6 \\
+    4 & 7 & 8 \\
+    5 & 9 & 10 \\
+    6 & 11 & 8 \\
+    7 & 5 & 12 \\
+    8 & 15 & 14 \\
+    9 & 9 & 10 \\
+    10 & 13 & 14 \\
+    11 & 5 & 16 \\
+    12 & 17 & 8 \\
+    13 & 9 & 18 \\
+    14 & 15 & 14 \\
+    15 & 9 & 20 \\
+    16 & 19 & 14 \\
+    17 & 9 & 18 \\
+    18 & 19 & 14 \\
+    19 & 9 & 18 \\
+    20 & 19 & 14 \\
+  \hline
+  \end{tabular}
+  \item Минимизируем полученный ДКА
+  \item \includegraphics[scale=0.4]{3_5(f)}
+  \includegraphics[scale=0.4]{3_5(m)}
+  \newpage
 \end{description}
 
+%4 задание
+\section{Определить является ли язык регулярным или нет}
+\begin{description}
+  \item [$L = \{(aab)^{n}b(aba)^{m}| n \geq 0, m \geq 0\}$]
+  \item Язык является регулярным, так как возможно построить автомат
+  \item \includegraphics[scale=0.4]{4_1}
+  
+  \item [$L = \{ uaav |u \in \{a, b\}^{*}, v \in a,b^{*}, |u|_b \geq |v|_a \}$]
+  \item Для удобства, докажем что дополнение к языку является регулярным, воспользовавшись леммой о накачке
+  \item $\overline{L} = \{ uaav |u \in \{a, b\}^{*}, v \in a,b^{*}, |u|_b > |v|_a \}$
+    \begin{itemize}
+      \item Зафиксируем n
+      \item Возьмем слово $b^n aa a^{n+1} \in \overline{L}$
+      \item Разобьем его на $x,y,z$ такие, что $|xy| \leq n$ и $|y| \geq 1$
+      \begin{itemize}
+        \item при 0 < m < n
+        \item $x=b^{n-m}$
+        \item $y=b^m$
+        \item $z=aa a^{n+1}$
+      \end{itemize}
+      \item Тогда при накачке $y$ полученное слово $\notin \overline{L}$ 
+    \end{itemize}
+  \item Так как дополнение - нерегулярный язык, то и L нерегулярный.
+  
+  \item [$L = \{a^mw | w \in \{a, b\}^*, 1 \leq |w|_b \leq m\}$]
+  \item Докажем, что язык регулярный с помощью дополнения
+  \item $\overline{L} = \{a^mw | w \in \{a, b\}^*,1>|w|_b>m\}$
+  \item Таким образом, так как не может быть отрицательного кол-ва букв, получаем язык $w=a^k, где k>0$
+  \item Данный автомат легко построить
+  \item \includegraphics[scale=0.4]{4_3}
+  
+  \item [$L = \{a^kb^ma^n | k = n \lor m > 0\}$]
+  
+  \item [$L = \{ucv | u \in \{a, b\}^*, v \in \{a, b\}^*, u \neq v^R\}$]
+  \item Для удобства, докажем что дополнение к языку является регулярным, воспользовавшись леммой о накачке
+  \item $\overline{L} = \{ucv | u \in \{a, b\}^*, v \in \{a, b\}^*, u = v^R\}$
+    \begin{itemize}
+      \item Зафиксируем n
+      \item Возьмем слово $a^{2(n+1)} c a^{n+1} \in \overline{L}$
+      \item Разобьем его на $x,y,z$ такие, что $|xy| \leq n$ и $|y| \geq 1$
+      \begin{itemize}
+        \item $x=a^{n-p}$
+        \item $y=a^p$
+        \item $z=a^{n+2}ca^{n+1}$
+      \end{itemize}
+      \item Тогда при накачке $y$ полученное слово $\notin \overline{L}$ 
+    \end{itemize}
+  \item Так как дополнение - нерегулярный язык, то и L нерегулярный.
+
+\end{description}
 \end{document}
