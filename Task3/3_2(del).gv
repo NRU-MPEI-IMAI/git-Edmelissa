@@ -18,7 +18,7 @@ digraph G
     n2 -> n7 [label = "a"]
     
     n4 -> n6 [label = "a"]
-    n4 -> n7 [label = "a"]
+    n4 -> n7 [label = "b"]
     
     n6 -> n4 [label = "b"]
     n6 -> n7 [label = "b"]
