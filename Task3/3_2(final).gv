@@ -1,28 +1,26 @@
 digraph G 
 {
     n1 [label = p1]
-    n2_9_13 [label = p2_9_13, shape = doublecircle]
-    n4_7_12 [label = p4_7_12]
-    n4_6_7 [label = p4_6_7]
+    n2 [label = p2]
+    n4_12 [label = p4_12]
+    n6 [label = p6]
     n9_13 [label = p9_13, shape = doublecircle]
-    n7_9_13 [label = p7_9_13, shape = doublecircle]
-    n12 [label = p12]
+    n7 [label = p7]
+    n9 [label = p9]
 
-
-    n1 -> n2_9_13 [label = "a"]
+    n1 -> n2 [label = "a"]
     
-    n2_9_13 -> n4_7_12 [label = "a"]
+    n2 -> n4_12 [label = "a"]
     
-    n4_7_12 -> n4_6_7 [label = "a"]
-    n4_7_12 -> n9_13 [label = "b"]
+    n4_12 -> n6 [label = "a"]
+    n4_12 -> n9_13 [label = "b"]
     
-    n4_6_7 -> n4_6_7 [label = "a"]
-    n4_6_7 -> n7_9_13 [label = "b"]
+    n6 -> n7 [label = "b"]
     
-    n9_13 -> n12 [label = "a"]
+    n9_13 -> n4_12 [label = "a"]
     
-    n7_9_13 -> n12 [label = "a"]
-    n7_9_13 -> n9_13 [label = "b"]
+    n7 -> n6 [label = "a"]
+    n7 -> n9 [label = "b"]
     
-    n12 -> n9_13 [label = "b"]
+    n9 -> n4_12 [label = "a"]
 }
