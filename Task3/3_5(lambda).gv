@@ -1,0 +1,89 @@
+digraph G 
+{
+    n1 [label = p1]
+    n2 [label = p2]
+    n3 [label = p3]
+    n4 [label = p4]
+    n5 [label = p5]
+    n6 [label = p6]
+    n7 [label = p7]
+    n8 [label = p8]
+    n9 [label = p9]
+    n10 [label = p10]
+    n11 [label = p11]
+    n12 [label = p12]
+    n13 [label = p13]
+    n14 [label = p14]
+    n15 [label = p15]
+    n16 [label = p16]
+    n17 [label = p17]
+    n18 [label = p18]
+    n19 [label = p19]
+    n20 [label = p20]
+    n21 [label = p21]
+    n22 [label = p22]
+    n23 [label = p23]
+    n24 [label = p24]
+    n25 [label = p25]
+    n26 [label = p26]
+    n27 [label = p27]
+    n28 [label = p28]
+    n29 [label = p29, shape = doublecircle]
+
+
+    n1 -> n2 [label = "λ"]
+    n1 -> n4 [label = "λ"]
+    
+    n2 -> n3 [label = "a"]
+    
+    n3 -> n6 [label = "λ"]
+    
+    n4 -> n5 [label = "b"]
+    
+    n5 -> n6 [label = "λ"]
+    
+    n6 -> n7 [label = "λ"]
+    
+    n7 -> n8 [label = "a"]
+    n7 -> n15 [label = "b"]
+    
+    n8 -> n9 [label = "λ"]
+    n8 -> n11 [label = "λ"]
+    
+    n9 -> n10 [label = "a"]
+    
+    n10 -> n22 [label = "λ"]
+    
+    n11 -> n12 [label = "b"]
+    n12 -> n13 [label = "a"]
+    n13 -> n14 [label = "b"]
+    
+    n14 -> n22 [label = "λ"]
+    
+    n15 -> n16 [label = "λ"]
+    n15 -> n18 [label = "λ"]
+    
+    n16 -> n17 [label = "b"]
+    
+    n17 -> n23 [label = "λ"]
+    
+    n18 -> n19 [label = "a"]
+    n19 -> n20 [label = "b"]
+    n20 -> n21 [label = "a"]
+    
+    n21 -> n23 [label = "λ"]
+    
+    n22 -> n24 [label = "λ"]
+    n23 -> n24 [label = "λ"]
+    
+    n24 -> n25 [label = "λ"]
+    n24 -> n27 [label = "λ"]
+    
+    n25 -> n26 [label = "a"]
+    
+    n26 -> n29 [label = "λ"]
+    
+    n27 -> n28 [label = "b"]
+    
+    n28 -> n29 [label = "λ"]
+}
