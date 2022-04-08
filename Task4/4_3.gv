@@ -1,0 +1,6 @@
+digraph G 
+{
+    n1 [label = p1, shape = doublecircle]
+
+    n1 -> n1 [label = "a"]
+}
